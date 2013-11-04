@@ -1,4 +1,4 @@
-wdsjn
+Wprowadzenie do semantyki języka naturalnego
 =====
 
-Wprowadzenie do semantyki języka naturalnego
+Projekt 2013/2014
