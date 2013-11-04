@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 import os
 
+from collections import OrderedDict
 from plp import PLP
 import sys
 import fileinput
 import re
-from collections import OrderedDict
+import codecs
 
 wordPattern = r'\b[^\W\d]+\b'
 wordObj = re.compile(wordPattern, re.IGNORECASE | re.UNICODE)
@@ -18,6 +19,7 @@ skojarzeniaDict = OrderedDict()
 p = PLP()
 
 def main():
+    sys.stdout = codecs.getwriter('utf8')(sys.stdout)
     buildSkojarzeniaDict()
     processInput()
 
