@@ -1,34 +1,46 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+from plp import PLP
 import fileinput
 import re
 import sys
 
+p = PLP()
+
 separator = r'#\d+'
 separatorPattern = re.compile(separator)
 
-bodziecPattern = None
+bodziecWord = None
 
 inputLines = []
 containingLines = []
     
 def main():
     global inputLines
+    forms = getForms()
+    # print(forms)
     inputLines = readInput()
-    parseLines()
+    parseLines(forms)
     paragraphs = sorted(getParagraphs())
     # print("Found", len(paragraphs), "paragraphs with given word")
     printParagraphs(paragraphs)
     
 def printParagraphs(paragraphs):
     for begin, end in paragraphs:
-        print("".join(map(str, inputLines[begin:end])))
+        for i in range(begin, end):
+            print(inputLines[i]),
+        print("")
 
-def parseLines():
+def parseLines(forms):
     for i, line in enumerate(inputLines):
-        if(bodziecPattern.match(line)):
-            containingLines.append(i)
-    
+        for form in forms:
+            if form in line:
+                containingLines.append(i)
+                break
+
+def getForms():
+    return map(lambda x : p.forms(x), p.orec(bodziecWord))[0]
 
 def getParagraphs():
     paragraphs = set()
@@ -57,15 +69,14 @@ def getParagraphEnd(lineNumber):
 def readInput():
     inputLines = []
     for line in fileinput.input(sys.argv[2]):
-        inputLines.append(line)
+        inputLines.append(line.decode("utf-8"))
     return inputLines
 
 if __name__ == "__main__":
     try:
         if len(sys.argv) < 3:
             sys.exit("Usage: %s <bodziec-word> <parseFile>" % sys.argv[0])
-        bodziecWord = r'.*'+sys.argv[1]+r'.*'
-        bodziecPattern = re.compile(bodziecWord, re.I)
+        bodziecWord = sys.argv[1].decode("utf-8")
         main()
     except KeyboardInterrupt:
         print("Oh, man! There's no results yet... See you later!")    
