@@ -34,12 +34,7 @@ def buildSkojarzeniaDict():
                 skojarzeniaDict[skojarzenieFile][word] = int(cardinality)
 
 def extractFileName(index):
-    fileName = os.path.basename(sys.argv[index]).split(".")[0]
-    return decorateFileName(fileName, index)
-
-def decorateFileName(fileName, index):
-    fileName = " ".join(["#", fileName])
-    return '#' + fileName if index > 3 else fileName
+    return os.path.basename(sys.argv[index]).split(".")[0]
 
 def extractCsvRow(line):
     return tuple(line.strip().replace("\"", "").split(","))
@@ -55,7 +50,7 @@ def processInput():
         processNote(note)
         note.clear()
 
-# @return set of words in their basic form for given line
+# return set of words in their basic form for given line
 def processNoteLine(line):
     processed = set()
     for word in wordObj.findall(line):
@@ -66,14 +61,13 @@ def processNoteLine(line):
 
 def processNote(note):
     for key, values in skojarzeniaDict.iteritems():
-        print(key)
+        print("-"),
         for value in values:
             if value in note:
-                items = ['%s', '%s']
-                if value == bodziecWord:
-                    items.append('%%')
-                print(','.join(items) % (value, values[value]))
-    print("")
+                items = ['%s']
+                print '%s,' % (value + '%' if value == bodziecWord else value),
+        print("")
+    print("#\n")
 
 if __name__ == "__main__":
     try:
