@@ -4,15 +4,21 @@ AGH University of Technology and Science
 
 2013/2014
 
-Uruchomienie
+Użycie
 ------------
-**Parser PAP (parser-pap.py)**
+**Text Parser (text-parser.py)**
+* Program, który wyciąga z plików ze wskazanych folderów paragrafy, które zawierają słowo-bodziec.
+* Działanie programu ścisle związane ze strukturą plików i katalagów dostarczonych przez prof. Lubaszewskiego.
+* NKJP i PAP w UTF-8. NKJP w ISO-8859-2.
+* Plik PAP musi być przeniesiony do osobnego folderu.
+* z katalogów NKJP brane są pod uwagę pliki `text.xml`
+* program korzysta z [PLP](https://github.com/agh-glk/plp)
 ```
-./parser-pap.py <slowo-bodziec> <plik-do-sparsowania> > <output>
+./text-parser.py <słowo-bodziec> <dir-with-files> <prus|nkjp|pap>
 ```  
 np. 
 ```
-./parser-pap.py niemowlę pap.txt > pap-niemowle.txt
+./text-parser.py niemowlę /home/dariusz/korpusy/pap/ <pap>
 ```
 
 **Wyszukanie skojarzeń do notatek (notatka-skojarzenia-list.py)**
@@ -23,5 +29,5 @@ np.
 ./notatka-skojarzenia-list.py <bodziec-word> <bodziec-notatki-file> <skojarzenie-file> ...
 ```
 ```
-./notatka-skojarzenia-list.py niemowlę pap-niemowle.txt niemowle.csv dziecko.csv pielucha.csv placz.csv
+./notatka-skojarzenia-list.py niemowlę niemowle_pap.txt niemowle.csv dziecko.csv pielucha.csv placz.csv
 ```
