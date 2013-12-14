@@ -26,6 +26,7 @@ np.
 
 * program korzysta z [PLP](https://github.com/agh-glk/plp)
 * <bodziec-notatki-file> to wynik uruchomienia poprzedniego programu (text-parser.py)
+
 #### Uruchomienie
 
 ```
