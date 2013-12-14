@@ -5,7 +5,7 @@ AGH University of Technology and Science
 2013/2014
 
 ## Użycie
-### Text Parser (text-parser.py)
+### Wyszukanie paragrafów ze słowem-bodźcem (text-parser.py)
 * Program, który wyciąga z plików ze wskazanych folderów paragrafy, które zawierają słowo-bodziec.
 * Działanie programu ścisle związane ze strukturą plików i katalagów dostarczonych przez prof. Lubaszewskiego.
 * NKJP i PAP w UTF-8. NKJP w ISO-8859-2.
