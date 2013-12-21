@@ -25,7 +25,7 @@ np.
 ### Wyszukanie skojarzeń do notatek (notatka-skojarzenia-list.py)
 
 * program korzysta z [PLP](https://github.com/agh-glk/plp)
-* <bodziec-notatki-file> to wynik uruchomienia poprzedniego programu (text-parser.py)
+* `<bodziec-notatki-file>` to wynik uruchomienia poprzedniego programu (text-parser.py)
 
 #### Uruchomienie
 
