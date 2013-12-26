@@ -9,7 +9,7 @@ Najczęściej pojawiającym się słowem skojarzeniem był wyraz _dziecko_, któ
 Często występowało także słowo _matka_ (5 razy).
 ### Narodowy Korpus Języka Polskiego (NKJP)
 W Narodowym Korpusie Języka Polskiego znalazło się 8 paragrafów ze słowem _niemowlę_.
-W 4 z nich znalazło się także słowo _dziecko_, w 2 _matka_ czy _kołyska_.
+W 4 z nich znalazło się także słowo _dziecko_, w 2 _matka_ oraz _kołyska_.
 ### Nowele i fragment powieści _Lalka_ Bolesława Prusa
 W nowelach i fragmentach powieści _Lalka_ Bolesława Prusa nie znaleziono ani jednego paragrafu, który zawierałby słowo-bodziec.
 
