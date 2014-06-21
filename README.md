@@ -8,7 +8,7 @@ AGH University of Technology and Science
 ### Wyszukanie paragrafów ze słowem-bodźcem (text-parser.py)
 * Program, który wyciąga z plików ze wskazanych folderów paragrafy, które zawierają słowo-bodziec.
 * Działanie programu ścisle związane ze strukturą plików i katalagów dostarczonych przez prof. Lubaszewskiego.
-* NKJP i PAP w UTF-8. NKJP w ISO-8859-2.
+* Prus i PAP w ISO-8859-2. NKJP w UTF-8.
 * Plik PAP musi być przeniesiony do osobnego folderu.
 * Z katalogów NKJP brane są pod uwagę pliki `text.xml`
 * program korzysta z [PLP](https://github.com/agh-glk/plp)
